@@ -136,9 +136,13 @@ public class ChessBoard extends Application {
                         int queenRowIndex = GridPane.getRowIndex(mouseEventSourceTempHolder);
                         int queenColumnIndex = GridPane.getColumnIndex(mouseEventSourceTempHolder);
                         int attackSquaresIndex[] = calculateAttackSquares(queenForMouseEvent, queenRowIndex, queenColumnIndex);
-                        int queenCellIndex = gridPane.getChildren().indexOf(mouseEventSourceTempHolder);
-                        for(int i = 0; i < 32; ) {
+                        int queenCellIndex = gridPane.getChildren().indexOf(mouseEventSource);
+                        System.out.println(attackSquaresIndex[0]);
+                        for(int i = 0; i < 32; i++) {
+
                             if (queenCellIndex == attackSquaresIndex[i]) {
+                                System.out.println(i + "This is i");
+                                if ()
                                 mouseEventSource.getChildren().add(queenForMouseEvent);
                                 mouseEventSource.hasPiece = true;
                                 mouseEventSourceTempHolder.hasPiece = false;
